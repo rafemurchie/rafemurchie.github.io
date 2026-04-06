@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <script src="https://gumroad.com/js/gumroad.js"></script>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rafe Murchie</title>
@@ -257,7 +257,7 @@ nav {
   align-items: start;
 }
 
-/* ── SINGLE BOOK CARD ── */
+/* ── BOOK CARD ── */
 .book-card {
   display: block;
   text-decoration: none;
@@ -334,7 +334,7 @@ nav {
   font-style: italic;
   letter-spacing: 0.01em;
   line-height: 1.2;
-  color: var(--light);
+  color: #f0ebe2;
   margin-bottom: 0.75rem;
 }
 
@@ -348,14 +348,45 @@ nav {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--c2);
-  border: 1px solid rgba(201,185,122,0.35);
+  border: 1px solid rgba(177,57,57,0.4);
   padding: 0.5rem 0.9rem;
   align-self: flex-start;
   transition: background 0.25s, border-color 0.25s;
 }
 .book-card:hover .book-dl-btn {
-  background: rgba(201,185,122,0.1);
+  background: rgba(177,57,57,0.12);
   border-color: var(--c2);
+}
+
+/* ── PLACEHOLDER CARD ── */
+.book-card.placeholder {
+  pointer-events: none;
+  opacity: 0.35;
+}
+.book-card.placeholder .book-frame {
+  background: rgba(0,0,0,0.06);
+}
+.placeholder-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.placeholder-line {
+  width: 30%;
+  height: 1px;
+  background: rgba(0,0,0,0.15);
+}
+.placeholder-label {
+  font-family: 'M PLUS 1 Code', monospace;
+  font-weight: 300;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.25);
 }
 
 /* ── FOOTER ── */
@@ -371,14 +402,14 @@ footer {
   font-weight: 800;
   letter-spacing: -0.03em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(240,235,226,0.15);
+  -webkit-text-stroke: 1px rgba(0,0,0,0.15);
 }
 .footer-meta {
   font-family: 'M PLUS 1 Code', monospace;
   font-weight: 300;
   font-size: 0.6rem;
   letter-spacing: 0.15em;
-  color: rgba(240,235,226,0.2);
+  color: rgba(0,0,0,0.2);
   text-align: right;
   line-height: 2;
 }
@@ -409,7 +440,7 @@ footer {
 
 <nav>
   <a href="#" class="nav-name">Rafe Murchie</a>
-  <span class="nav-hint">Free PDFs</span>
+  <span class="nav-hint">Fiction</span>
 </nav>
 
 <section class="hero">
@@ -420,7 +451,7 @@ footer {
   </div>
   <div class="hero-bg-text">READ</div>
   <div class="hero-content reveal">
-    <span class="hero-label">Free to Download Fiction</span>
+    <span class="hero-label">Fiction · Pay What You Want</span>
     <h1 class="hero-title">
       <span class="line-1">Rafe</span>
       <span class="line-2">Murchie</span>
@@ -436,96 +467,95 @@ footer {
 <div class="ticker">
   <div class="ticker-track">
     <span class="ticker-item">Fiction</span>
-    <span class="ticker-item">Free to Read</span>
-    <span class="ticker-item">Download PDFs</span>
-    <span class="ticker-item">Books</span>
+    <span class="ticker-item">Pay What You Want</span>
     <span class="ticker-item">Rafe Murchie</span>
+    <span class="ticker-item">Gaping Mouth</span>
+    <span class="ticker-item">From £1</span>
     <span class="ticker-item">Fiction</span>
-    <span class="ticker-item">Free to Read</span>
-    <span class="ticker-item">Download PDFs</span>
-    <span class="ticker-item">Books</span>
+    <span class="ticker-item">Pay What You Want</span>
     <span class="ticker-item">Rafe Murchie</span>
-    <span class="ticker-item">Fiction</span>
-    <span class="ticker-item">Free to Read</span>
-    <span class="ticker-item">Download PDFs</span>
-    <span class="ticker-item">Books</span>
-    <span class="ticker-item">Rafe Murchie</span>
+    <span class="ticker-item">Gaping Mouth</span>
+    <span class="ticker-item">From £1</span>
   </div>
 </div>
 
 <section class="books" id="books">
   <div class="books-header reveal">
     <h2 class="books-heading">The<br><em>Works</em></h2>
-    <span class="books-count">06 novels</span>
+    <span class="books-count">01 novel</span>
   </div>
 
   <div class="books-grid reveal">
 
-    <a class="book-card" href="https://rafemurchie.gumroad.com/l/xiuiwz" data-gumroad-overlay-checkout="true">
+    <!-- ── BOOK 1: GAPING MOUTH — real Gumroad link ── -->
+    <a class="book-card gumroad-button"
+       href="https://rafemurchie.gumroad.com/l/xiuiwz"
+       data-gumroad-overlay-checkout="true">
       <div class="book-frame">
         <span class="book-num">01</span>
-        <img class="book-cover-img" src="covers/book1.png" alt="Book One">
+        <img class="book-cover-img" src="covers/book1.png" alt="Gaping Mouth">
         <div class="book-overlay">
-          <p class="book-title-text">Book Title One</p>
-          <span class="book-dl-btn">↓ Download</span>
+          <p class="book-title-text">Gaping Mouth</p>
+          <span class="book-dl-btn">↓ From £1</span>
         </div>
       </div>
     </a>
 
-    <a class="book-card" href="https://rafemurchie.gumroad.com/l/xxxxxx" data-gumroad-overlay-checkout="true">
+    <!-- ── PLACEHOLDERS 02–06 ── -->
+    <div class="book-card placeholder">
       <div class="book-frame">
         <span class="book-num">02</span>
-        <img class="book-cover-img" src="covers/book2.png" alt="Book Two">
-        <div class="book-overlay">
-          <p class="book-title-text">Book Title Two</p>
-          <span class="book-dl-btn">↓ Download</span>
+        <div class="placeholder-inner">
+          <div class="placeholder-line"></div>
+          <span class="placeholder-label">Coming</span>
+          <div class="placeholder-line"></div>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="book-card" href="https://rafemurchie.gumroad.com/l/xxxxxx" data-gumroad-overlay-checkout="true">
+    <div class="book-card placeholder">
       <div class="book-frame">
         <span class="book-num">03</span>
-        <img class="book-cover-img" src="covers/book3.png" alt="Book Three">
-        <div class="book-overlay">
-          <p class="book-title-text">Book Title Three</p>
-          <span class="book-dl-btn">↓ Download</span>
+        <div class="placeholder-inner">
+          <div class="placeholder-line"></div>
+          <span class="placeholder-label">Coming</span>
+          <div class="placeholder-line"></div>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="book-card" href="https://rafemurchie.gumroad.com/l/xxxxxx" data-gumroad-overlay-checkout="true">
+    <div class="book-card placeholder">
       <div class="book-frame">
         <span class="book-num">04</span>
-        <img class="book-cover-img" src="covers/book4.png" alt="Book Four">
-        <div class="book-overlay">
-          <p class="book-title-text">Book Title Four</p>
-          <span class="book-dl-btn">↓ Download</span>
+        <div class="placeholder-inner">
+          <div class="placeholder-line"></div>
+          <span class="placeholder-label">Coming</span>
+          <div class="placeholder-line"></div>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="book-card" href="https://rafemurchie.gumroad.com/l/xxxxxx" data-gumroad-overlay-checkout="true">
+    <div class="book-card placeholder">
       <div class="book-frame">
         <span class="book-num">05</span>
-        <img class="book-cover-img" src="covers/book5.png" alt="Book Five">
-        <div class="book-overlay">
-          <p class="book-title-text">Book Title Five</p>
-          <span class="book-dl-btn">↓ Download</span>
+        <div class="placeholder-inner">
+          <div class="placeholder-line"></div>
+          <span class="placeholder-label">Coming</span>
+          <div class="placeholder-line"></div>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="book-card" href="https://rafemurchie.gumroad.com/l/xxxxxx" data-gumroad-overlay-checkout="true">
+    <div class="book-card placeholder">
       <div class="book-frame">
         <span class="book-num">06</span>
-        <img class="book-cover-img" src="covers/book6.png" alt="Book Six">
-        <div class="book-overlay">
-          <p class="book-title-text">Book Title Six</p>
-          <span class="book-dl-btn">↓ Download</span>
+        <div class="placeholder-inner">
+          <div class="placeholder-line"></div>
+          <span class="placeholder-label">Coming</span>
+          <div class="placeholder-line"></div>
         </div>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -564,6 +594,9 @@ window.addEventListener('scroll', () => {
   });
 });
 </script>
+
+<!-- Gumroad script must be at the bottom so it finds the links in the DOM -->
+<script src="https://gumroad.com/js/gumroad.js"></script>
 
 </body>
 </html>
